@@ -7,7 +7,7 @@ import (
 
 func TestSnowFlake(t *testing.T) {
 	fmt.Println("start generate")
-	iw := NewIdWorker(2)
+	iw, _ := NewIdWorker(2)
 	for i := 0; i < 100; i++ {
 		id, err := iw.NextId()
 		if err != nil {

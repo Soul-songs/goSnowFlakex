@@ -3,10 +3,10 @@
 // its link is: https://github.com/twitter/snowflake/releases/tag/snowflake-2010
 //
 
-// 0          41	51			  64
-// +-----------+------+------------+
-// |timestamp  |node  |increment   |
-// +-----------+------+------------+
+// 0               41	           51			 63
+// +---------------+----------------+------------+
+// |timestamp(ms)  | worker node id | sequence	 |
+// +---------------+----------------+------------+
 
 // Copyright (C) 2016 by zheng-ji.info
 
@@ -20,13 +20,14 @@ import (
 
 const (
 	CEpoch         = 1457159242
-	CWorkerIdBits  = 10
-	CSenquenceBits = 12
+	CWorkerIdBits  = 10 // Num of WorkerId Bits
+	CSenquenceBits = 12 // Num of Sequence Bits
 
 	CWorkerIdShift  = 12
 	CTimeStampShift = 22
 )
 
+// IdWorker Struct
 type IdWorker struct {
 	workerId      int64
 	lastTimeStamp int64
@@ -36,13 +37,14 @@ type IdWorker struct {
 	lock          *sync.Mutex
 }
 
+// NewIdWorker Func: Generate NewIdWorker with Given workerid
 func NewIdWorker(workerid int64) (iw *IdWorker, err error) {
 	iw = new(IdWorker)
 
 	iw.maxWorkerId = getMaxWorkerId()
 
 	if workerid > iw.maxWorkerId || workerid < 0 {
-		return nil, errors.New("worker not fit ")
+		return nil, errors.New("worker not fit")
 	}
 	iw.workerId = workerid
 	iw.lastTimeStamp = -1
