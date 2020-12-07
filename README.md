@@ -17,14 +17,15 @@ Feature
 * Implement Twitter's SnowFlake theory
 
 
-### Desc
+Description
+-----------
 
 
 ```
 0               41	           51			 63
-+---------------+----------------+------------+
++---------------+----------------+-----------+
 |timestamp(ms)  | worker node id | sequence	 |
-+---------------+----------------+------------+
++---------------+----------------+-----------+
 
 id  = timestamp | workerid | sequence
 ```
@@ -40,7 +41,8 @@ Installation
 go get github.com/zheng-ji/goSnowFlake
 ```
 
-### Example
+Example
+-------
 
 ```go
 import (
