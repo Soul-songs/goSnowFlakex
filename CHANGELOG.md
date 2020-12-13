@@ -6,3 +6,7 @@
 * Green pluggable, without external storage like redis or mysql
 * Suitable for distributed systems
 * Implement Twitter SnowFlake theory
+
+## 1.0.1
+
+* TODO Provide Web interface
