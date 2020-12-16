@@ -26,7 +26,8 @@ Description
 |timestamp(ms)  | worker node id | sequence	 |
 +---------------+----------------+-----------+
 
-id  = timestamp | workerid | sequence
+id  = timestamp | workerid | sequence (eg. 1451063443347648410)
+
 ```
 
 An id is composed by three part: timestamp in millon second, worker id, and sequence. Sequence is zero default. when timestamp is the same, we use sequence to avoid conflict
