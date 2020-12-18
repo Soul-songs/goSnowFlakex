@@ -51,7 +51,8 @@ import (
 )
 
 func main() {
-	iw, err := snowflake.NewIdWorker(1)
+    // Params: Given the workerId, 0 < workerId < 1024
+	iw, err := snowflake.NewIdWorker(1) 
 	if err!= nil {
 		fmt.Println(err)
 	}
