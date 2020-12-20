@@ -7,6 +7,8 @@ According to the Twitter SnowFlake Theory, A ThreadSafe Unique ID  Generator wri
 
 根据 Twitter SnowFlake 算法, 实现的分布式线程安全 UID 生成器
 
+![goSnowFlake](https://github.com/zheng-ji/logo/snowflake.png)
+
 Feature
 --------
 
@@ -21,7 +23,7 @@ Description
 
 
 ```
-0               41	           51			 63
+0               41	           51			64
 +---------------+----------------+-----------+
 |timestamp(ms)  | worker node id | sequence	 |
 +---------------+----------------+-----------+
@@ -52,7 +54,7 @@ import (
 
 func main() {
     // Params: Given the workerId, 0 < workerId < 1024
-	iw, err := snowflake.NewIdWorker(1) 
+	iw, err := goSnowFlake.NewIdWorker(1) 
 	if err!= nil {
 		fmt.Println(err)
 	}

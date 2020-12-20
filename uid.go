@@ -3,14 +3,14 @@
 // its link is: https://github.com/twitter/snowflake/releases/tag/snowflake-2010
 //
 
-// 0               41	           51			 63
+// 0               41	           51			 64
 // +---------------+----------------+------------+
 // |timestamp(ms)  | worker node id | sequence	 |
 // +---------------+----------------+------------+
 
 // Copyright (C) 2016 by zheng-ji.info
 
-package snowflake
+package goSnowFlake
 
 import (
 	"errors"
