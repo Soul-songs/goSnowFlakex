@@ -7,7 +7,7 @@ According to the Twitter SnowFlake Theory, A ThreadSafe Unique ID  Generator wri
 
 根据 Twitter SnowFlake 算法, 实现的分布式线程安全 UID 生成器
 
-![goSnowFlake](https://github.com/zheng-ji/logo/snowflake.png)
+![goSnowFlake](https://github.com/zheng-ji/goSnowFlake/blob/master/logo/snowflake.png)
 
 Feature
 --------
