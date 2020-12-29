@@ -13,7 +13,7 @@ Feature
 --------
 
 * ThreadSafe unique id generator
-* Green pluggable, without external storage like redis or mysql
+* Green pluggable, without external storage like Redis or MySQL
 * Suitable for distributed systems
 * Implement Twitter's SnowFlake theory
 
