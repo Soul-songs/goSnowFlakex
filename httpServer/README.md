@@ -4,13 +4,14 @@ How To Use
 * Server Side
 
 ```
-go run main.go
+go build main.go
+./main
 ```
 
 * Client Side, eg. 
 
 ```
-Get id from server where workerid = 1
+//Get id from server where workerid = 1
 curl localhost:8182/worker/1
 
 {
