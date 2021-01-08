@@ -75,5 +75,5 @@ Documentation
 License
 -------
 
-Copyright (c) 2015 by [zheng-ji](http://zheng-ji.info) released under MIT License.
+Copyright (c) 2016 by [zheng-ji](http://zheng-ji.info) released under MIT License.
 
