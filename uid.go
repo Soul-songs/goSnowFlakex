@@ -71,6 +71,8 @@ func (iw *IdWorker) timeReGen(last int64) int64 {
 	for {
 		if ts < last {
 			ts = iw.timeGen()
+		} else {
+			break
 		}
 	}
 	return ts
