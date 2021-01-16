@@ -11,3 +11,7 @@
 
 - [x] ADD HTTP Server With Gin
 - [x] Change Package Name from snowflake to goSnowFlake
+
+## 1.0.2 (2016-03-08)
+
+- [x] Fix [issue](https://github.com/zheng-ji/goSnowFlake/issues/1) 
