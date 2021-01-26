@@ -60,10 +60,10 @@ func main() {
 	}
 	for i := 0; i < 100; i++ {
 		if id, err := iw.NextId(); err != nil {
-			fmt.Println(err)
-        	}else{
-        		fmt.Println(id)
-        	}
+            fmt.Println(err)
+        } else{
+            fmt.Println(id)
+        }
 	}
 }
 ```
