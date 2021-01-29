@@ -3,9 +3,9 @@
 [![Build Status](https://travis-ci.org/zheng-ji/goSnowFlake.svg)](https://travis-ci.org/zheng-ji/goSnowFlake)
 [![GoDoc](https://godoc.org/github.com/zheng-ji/goSnowFlake?status.svg)](https://godoc.org/github.com/zheng-ji/goSnowFlake)
 
-According to the Twitter SnowFlake Theory, A ThreadSafe Unique ID  Generator written by Golang
+A threadsafe unique ID generator inspired by Twitter SnowFlake theory
 
-根据 Twitter SnowFlake 算法, 实现的分布式线程安全 UID 生成器
+根据 Twitter SnowFlake 算法， 实现的分布式线程安全 UID 生成器
 
 ![goSnowFlake](https://github.com/zheng-ji/goSnowFlake/blob/master/logo/snowflake.png)
 
@@ -32,7 +32,7 @@ id  = timestamp | workerid | sequence (eg. 1451063443347648410)
 
 ```
 
-An id is composed by three part: timestamp in millon second, worker id, and sequence. Sequence is zero default. when timestamp is the same, we use sequence to avoid conflict
+An id is composed by three part: timestamp in millon second, worker id, and sequence. Sequence is zero by default. When timestamp is the same, we use sequence to avoid conflict.
 
 
 
