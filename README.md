@@ -32,8 +32,11 @@ id  = timestamp | workerid | sequence (eg. 1451063443347648410)
 
 ```
 
-An id is composed by three part: timestamp in millon second, worker id, and sequence. Sequence is zero by default. When timestamp is the same, we use sequence to avoid conflict.
+An unique ID contains 3 parts:
 
+* a timestamp in nanosecond
+* a worker ID
+* a sequence number
 
 
 Installation
