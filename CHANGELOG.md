@@ -15,3 +15,7 @@
 ## 1.0.2 (2016-03-08)
 
 - [x] Fix [issue](https://github.com/zheng-ji/goSnowFlake/issues/1) 
+
+## 1.1.0 (2016-09-29)
+
+- [x] Merge Pull Request,Fix algorithm bug and add ParseId
