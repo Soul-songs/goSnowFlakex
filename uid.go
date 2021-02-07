@@ -63,11 +63,11 @@ func getSequenceMask() int64 {
 }
 
 func (iw *IdWorker) timeGen() int64 {
-	return time.Now().UnixNano()
+	return time.Now().UnixNano() / 1000000
 }
 
 func (iw *IdWorker) timeReGen(last int64) int64 {
-	ts := time.Now().UnixNano()
+	ts := iw.timeGen()
 	for {
 		if ts < last {
 			ts = iw.timeGen()
@@ -97,6 +97,6 @@ func (iw *IdWorker) NextId() (ts int64, err error) {
 		return 0, err
 	}
 	iw.lastTimeStamp = ts
-	ts = ts - CEpoch<<CTimeStampShift | iw.workerId<<CWorkerIdShift | iw.sequence
+	ts = (ts-CEpoch)<<CTimeStampShift | iw.workerId<<CWorkerIdShift | iw.sequence
 	return ts, nil
 }
