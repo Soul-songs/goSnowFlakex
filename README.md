@@ -1,7 +1,6 @@
-## goSnowFlake
+## snowflake
 
-[![Build Status](https://travis-ci.org/zheng-ji/goSnowFlake.svg)](https://travis-ci.org/zheng-ji/goSnowFlake)
-[![GoDoc](https://godoc.org/github.com/zheng-ji/goSnowFlake?status.svg)](https://godoc.org/github.com/zheng-ji/goSnowFlake)
+[![GoDoc](https://godoc.org/github.com/guileen/snowflake?status.svg)](https://godoc.org/github.com/guileen/snowflake)
 
 A threadsafe unique ID generator inspired by Twitter SnowFlake theory
 
@@ -43,7 +42,7 @@ Installation
 -------------
 
 ```
-go get github.com/zheng-ji/goSnowFlake
+go get github.com/guileen/snowflake
 ```
 
 Example
@@ -52,12 +51,12 @@ Example
 ```go
 import (
 	"fmt"
-	"github.com/zheng-ji/goSnowFlake"
+	"github.com/guileen/snowflake
 )
 
 func main() {
     // Params: Given the workerId, 0 < workerId < 1024
-	iw, err := goSnowFlake.NewIdWorker(1) 
+	iw, err := snowflake.NewIdWorker(1) 
 	if err!= nil {
 		fmt.Println(err)
 	}
