@@ -41,7 +41,7 @@ Installation
 -------------
 
 ```
-go get github.com/guileen/snowflake
+go get github.com/zheng-ji/goSnowFlake
 ```
 
 Example
@@ -50,7 +50,7 @@ Example
 ```go
 import (
 	"fmt"
-	"github.com/guileen/snowflake
+	"github.com/zheng-ji/goSnowFlake
 )
 
 func main() {
