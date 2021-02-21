@@ -102,6 +102,7 @@ func (iw *IdWorker) NextId() (ts int64, err error) {
 	return ts, nil
 }
 
+// ParseId Func: reverse uid to timestamp, workid, seq
 func ParseId(id int64) (t time.Time, ts int64, workerId int64, seq int64) {
 	seq = id & CSequenceMask
 	workerId = (id >> CWorkerIdShift) & CMaxWorker
